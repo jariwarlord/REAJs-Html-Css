@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Sayfası</title>
+<link rel="stylesheet" href="css/bootstrap-grid.css">
+<link rel="stylesheet" href="css/bootstrap-grid.css.map">
+<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="css/bootstrap-grid.min.css.map">
+<link rel="stylesheet" href="css/bootstrap-reboot.css">
+<link rel="stylesheet" href="css/bootstrap-reboot.css.map">
+<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+<link rel="stylesheet" href="css/bootstrap-reboot.min.css.map">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap.css.map">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css.map">
+
+<script type="text/javascript" language="javascript" src="js/bootstrap.bundle.js"></script>
+<script type="text/javascript" language="javascript" src="js/bootstrap.bundle.js.map"></script>
+<script type="text/javascript" language="javascript" src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/bootstrap.bundle.min.js.map"></script>
+<script type="text/javascript" language="javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" language="javascript" src="js/bootstrap.js.map"></script>
+<script type="text/javascript" language="javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/bootstrap.min.js.map"></script>
+
+    <script type="text/javascript" language="javascript">
+        function kontrol()
+        {
+return confirm("Form gönderilsin mi?");
+        }
+    </script>
+
+<link rel="stylesheet" type="text/css" href="login.css" />
+   
+</head>
+
+<body>
+    
+    
+<div class="container">
+    <form name="myfirstform" onsubmit="return kontrol()" action="index.html">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email Address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">Bilgilerin bizimle güvende.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Gönder</button>
+      </form>
+    </div>
+      <script text="text/javascript" language="javascript">
+
+        "use strict"; // katı kurallı çalıştırıcak
+
+        var fEnter = document.forms["myfirstform"];
+
+        var email = fEnter.elements["exampleInputEmail1"];
+
+        var password = fEnter.elements["exampleInputPassword1"];
+
+
+
+        fEnter.onsubmit = function(){
+
+            if(password.value.length < 6){
+
+                alert("Password must be at least 6 characters long");
+
+                password.focus();
+
+                return false;
+
+            }
+
+            if(email.value == ""){
+
+                alert("E-mail address is required");
+
+                email.focus();
+
+                return false;
+
+            }
+
+            if(password.value == ""){
+
+                alert("Password cannot be empty.");
+
+                password.focus();
+
+                return false;
+
+            }
+
+            else{
+
+                alert("Success");
+
+            }
+
+            return true;
+
+        }
+
+      </script>
+
+</body>
+</html>
