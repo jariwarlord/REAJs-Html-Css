@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDDEN TEXT WITH JQUERY</title>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <div id="d1" class="kutu">MENU</div>
+    <div id="d2" class="kutu2">HAK</div>
+    
+    <!-- $(secilen nesne).islem() -->
+    <button class="btn-1">Gizle/Göster</button>
+    <button class="btn-2">Göster</button>
+    <p class="p1">Lorem Ipsum</p>
+    <input class="p1" type="text" value="Rengimi Değiştir">
+    <script src="jquery.js"></script>
+    <script>
+        $(".btn-1").click(function(){
+            $(".p1").hide(1000);
+        });
+        $(".btn-2").click(function(){
+            $(".p1").toggle(1000);
+        });
+        $(".p1").mouseleave(function(){
+            alert("Mouse metni terk etti!")
+        });
+        $("input").focus(function(){
+            $(this).css("background-color","#000");
+        });
+        $("#d1").click(function(){
+            $("#d2").slideToggle(1000);
+        });
+    </script>
+</body>
+</html>
